@@ -5,12 +5,13 @@ import io
 from datetime import date
 
 # environment variables
-leaderboard = os.getenv('leaderboard')
-session = os.getenv('session')
-readme = os.getenv('file')
-id = os.getenv('id')
-day_regex = os.getenv('day_regex')
-stars_regex = os.getenv('stars_regex')
+leaderboard = os.getenv('INPUT_LEADERBOARD')
+session = os.getenv('INPUT_SESSION')
+readme = os.getenv('INPUT_FILE')
+id = os.getenv('INPUT_USERID')
+day_regex = os.getenv('INPUT_DAYREGEX')
+stars_regex = os.getenv('INPUT_STARSREGEX')
+if (leaderboard is None or leaderboard == 'None' ) leaderboard = 'https://adventofcode.com/2020/leaderboard/private/view/' + id + ".json"
 
 # fetch stars
 cookie = { 'session' : session }
