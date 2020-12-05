@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-python aoc-badges.py
+python /aoc-badges.py
