@@ -4,7 +4,7 @@ Github Action to update the [badges](https://github.com/badges/shields) of your 
 Have a look at these examples:
 
 ![](https://img.shields.io/badge/day%20📅-5-blue)
-![](https://img.shields.io/badge/Stars%20⭐-10-yellow)
+![](https://img.shields.io/badge/stars%20⭐-10-yellow)
 
 ## Setup
 First of all you have to add the badges to your README. 
@@ -14,7 +14,7 @@ Here are the default ones:
 | Badge                                                | Raw Badge                                              |
 |------------------------------------------------------|--------------------------------------------------------|
 | ![](https://img.shields.io/badge/day%20📅-5-blue)     | `![](https://img.shields.io/badge/day%20📅-5-blue)`     |
-| ![](https://img.shields.io/badge/Stars%20⭐-10-yellow) | `![](https://img.shields.io/badge/Stars%20⭐-10-yellow)` |
+| ![](https://img.shields.io/badge/stars%20⭐-10-yellow) | `![](https://img.shields.io/badge/stars%20⭐-10-yellow)` |
 
 The default values for the regular expressions can be found in the [`actions.yml`](https://github.com/joblo2213/AoC-badges/blob/master/action.yml)
 if you need to tweak them.

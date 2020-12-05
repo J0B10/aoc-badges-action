@@ -32,7 +32,7 @@ inputs:
     description: >
       A regular expression to find the stars badge in your file. Must be changed if you change the badge.
     required: false
-    default: '(?<=https:\/\/img\.shields\.io\/badge\/Stars%20⭐-)[0-9]+(?=-yellow)'
+    default: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
 branding:
   icon: 'star'
   color: 'yellow'
