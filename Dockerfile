@@ -1,8 +1,6 @@
 FROM python:3.8-alpine
 
-RUN apk add build-base
-
-RUN pip install mkdocs requests
+RUN pip install requests
 
 ADD entrypoint.sh /entrypoint.sh
 ADD aoc-badges.py /aoc-badges.py
