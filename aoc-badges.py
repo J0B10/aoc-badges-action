@@ -12,7 +12,7 @@ readme = os.getenv('INPUT_FILE')
 id = os.getenv('INPUT_USERID')
 day_regex = os.getenv('INPUT_DAYREGEX')
 stars_regex = os.getenv('INPUT_STARSREGEX')
-if leaderboard is None or leaderboard == 'None' :
+if leaderboard is None or not leaderboard :
   leaderboard = 'https://adventofcode.com/2020/leaderboard/private/view/' + id + ".json"
 
 # fetch stars
