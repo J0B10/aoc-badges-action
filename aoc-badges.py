@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 import re
 import io
 from datetime import date
@@ -11,10 +12,12 @@ readme = os.getenv('INPUT_FILE')
 id = os.getenv('INPUT_USERID')
 day_regex = os.getenv('INPUT_DAYREGEX')
 stars_regex = os.getenv('INPUT_STARSREGEX')
-if (leaderboard is None or leaderboard == 'None' ) leaderboard = 'https://adventofcode.com/2020/leaderboard/private/view/' + id + ".json"
+if leaderboard is None or leaderboard == 'None' :
+  leaderboard = 'https://adventofcode.com/2020/leaderboard/private/view/' + id + ".json"
 
 # fetch stars
 cookie = { 'session' : session }
+print('Fetching leaderboard data from : ' + leaderboard)
 r = requests.get(leaderboard, cookies = cookie)
 print(r.text)
 data = json.loads(r.text)

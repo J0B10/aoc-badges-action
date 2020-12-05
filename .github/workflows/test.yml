@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Test
+
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.SSH_KEY }}
+      - uses: joblo2213/aoc-badges-action@master
+        with:
+          userid: 658601
+          session: ${{ secrets.AOC_SESSION }}
+      - name: Push changes
+        run: |
+          git config --global user.email "<>"
+          git config --global user.name "aoc-badges-action"
+          git add .
+          git diff-index --quiet HEAD || git commit --message "Update badges"
+          git push
