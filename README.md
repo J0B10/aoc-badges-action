@@ -15,6 +15,7 @@ Here are the default ones:
 |------------------------------------------------------|--------------------------------------------------------|
 | ![](https://img.shields.io/badge/day%20📅-5-blue)     | `![](https://img.shields.io/badge/day%20📅-5-blue)`     |
 | ![](https://img.shields.io/badge/stars%20⭐-10-yellow) | `![](https://img.shields.io/badge/stars%20⭐-10-yellow)` |
+| ![](https://img.shields.io/badge/days%20completed-0-red) | `![](https://img.shields.io/badge/days%20completed-0-red)` |
 
 The default values for the regular expressions can be found in the [`actions.yml`](https://github.com/joblo2213/AoC-badges/blob/master/action.yml)
 if you need to tweak them.
@@ -65,10 +66,11 @@ jobs:
           
 #         Optional inputs:
 #         
-#         leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'    # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
-#         file: 'README.md'                                                                   # The file that contains the badges
-#         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'        # Regualr expression that finds the content of the day badge iun your file.
-#         starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'  # # Regualr expression that finds the content of the stars badge iun your file.
+#         leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
+#         file: 'README.md'                                                                              # The file that contains the badges
+#         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge iun your file.
+#         starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge iun your file.
+#         daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
 
       - name: Push changes                        # Step that pushes these local changes back to your github repo
         run: |

@@ -33,6 +33,11 @@ inputs:
       A regular expression to find the stars badge in your file. Must be changed if you change the badge.
     required: false
     default: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'
+  daysCompletedRegex:
+    description: >
+      A regular expression to find the completed days badge in your file. Must be changed if you change the badge.
+    required: false
+    default: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'
 branding:
   icon: 'star'
   color: 'yellow'
