@@ -3,7 +3,7 @@ import json
 import os
 import re
 import io
-from datetime import date
+from datetime import date, timedelta
 
 # environment variables
 leaderboard = os.getenv('INPUT_LEADERBOARD')
@@ -31,7 +31,7 @@ for day in data['members']['658601']['completion_day_level']:
     days_completed += 1
 
 # current day
-today = date.today()
+today = date.today() - timedelta(hours=5)
 day = today.day if today.month == 12 else 24
 
 print('Day: ' + str(day))
