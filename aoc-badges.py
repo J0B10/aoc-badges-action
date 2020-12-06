@@ -22,12 +22,12 @@ print('Fetching leaderboard data from : ' + leaderboard)
 r = requests.get(leaderboard, cookies = cookie)
 print(r.text)
 data = json.loads(r.text)
-stars = data['members']['658601']['stars']
+stars = data['members'][id]['stars']
 
 # completed days
 days_completed = 0
-for day in data['members']['658601']['completion_day_level']:
-  if '2' in data['members']['658601']['completion_day_level'][day]:
+for day in data['members'][id]['completion_day_level']:
+  if '2' in data['members'][id]['completion_day_level'][day]:
     days_completed += 1
 
 # current day
