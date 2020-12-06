@@ -7,18 +7,21 @@ Have a look at these examples:
 ![](https://img.shields.io/badge/stars%20⭐-12-yellow)
 
 ## Setup
-First of all you have to add the badges to your README. 
+First of all you have to add the badges to your README.
+You can use only some of them or even customize them to fit your needs.  
 Note that if you want to customize the badges you might have to tweak the regeular expressions used to match your badges.
 Here are the default ones:
 
-| Badge                                                | Raw Badge                                              |
-|------------------------------------------------------|--------------------------------------------------------|
-| ![](https://img.shields.io/badge/day%20📅-6-blue)     | `![](https://img.shields.io/badge/day%20📅-6-blue)`     |
-| ![](https://img.shields.io/badge/stars%20⭐-12-yellow) | `![](https://img.shields.io/badge/stars%20⭐-12-yellow)` |
-| ![](https://img.shields.io/badge/days%20completed-6-red) | `![](https://img.shields.io/badge/days%20completed-6-red)` |
+| Badge                                                    | Raw Badge                                                 | Description                                            |
+|----------------------------------------------------------|-----------------------------------------------------------|--------------------------------------------------------|
+| ![](https://img.shields.io/badge/day%20📅-6-blue)        | `![](https://img.shields.io/badge/day%20📅-6-blue)`       | Displays the current calendar day                      |
+| ![](https://img.shields.io/badge/stars%20⭐-12-yellow)   | `![](https://img.shields.io/badge/stars%20⭐-12-yellow)`  | Displays the total amount of collected stars           |
+| ![](https://img.shields.io/badge/days%20completed-6-red) | `![](https://img.shields.io/badge/days%20completed-6-red)` | Displyas on how many days you completed all tasks      |
 
 The default values for the regular expressions can be found in the [`actions.yml`](https://github.com/joblo2213/AoC-badges/blob/master/action.yml)
 if you need to tweak them.
+
+The action will search through your readme and updates all badges it finds using the provided (or default) regular expressions.
 
 Next you have to obtain your session and your user id.  
 Go to [Advent of Code leaderboards](https://adventofcode.com/2020/leaderboard/private) and click on `[View]` to visit your private leaderboard.
