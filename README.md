@@ -62,7 +62,7 @@ jobs:
         with:
           ssh-key: ${{ secrets.SSH_KEY }}
           
-      - uses: joblo2213/aoc-badges-action@v2
+      - uses: joblo2213/aoc-badges-action@v2.1
         with:
           userid: 00000                          # your user id, see setup on how to obtain
           session: ${{ secrets.AOC_SESSION }}    # secret containing session code, see setup on how to obtain
