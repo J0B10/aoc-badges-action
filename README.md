@@ -3,8 +3,8 @@ Github Action to update the [badges](https://github.com/badges/shields) of your 
 
 Have a look at these examples:
 
-![](https://img.shields.io/badge/day%20📅-5-blue)
-![](https://img.shields.io/badge/stars%20⭐-10-yellow)
+![](https://img.shields.io/badge/day%20📅-6-blue)
+![](https://img.shields.io/badge/stars%20⭐-12-yellow)
 
 ## Setup
 First of all you have to add the badges to your README. 
@@ -13,9 +13,9 @@ Here are the default ones:
 
 | Badge                                                | Raw Badge                                              |
 |------------------------------------------------------|--------------------------------------------------------|
-| ![](https://img.shields.io/badge/day%20📅-5-blue)     | `![](https://img.shields.io/badge/day%20📅-5-blue)`     |
-| ![](https://img.shields.io/badge/stars%20⭐-10-yellow) | `![](https://img.shields.io/badge/stars%20⭐-10-yellow)` |
-| ![](https://img.shields.io/badge/days%20completed-0-red) | `![](https://img.shields.io/badge/days%20completed-0-red)` |
+| ![](https://img.shields.io/badge/day%20📅-6-blue)     | `![](https://img.shields.io/badge/day%20📅-6-blue)`     |
+| ![](https://img.shields.io/badge/stars%20⭐-12-yellow) | `![](https://img.shields.io/badge/stars%20⭐-12-yellow)` |
+| ![](https://img.shields.io/badge/days%20completed-6-red) | `![](https://img.shields.io/badge/days%20completed-6-red)` |
 
 The default values for the regular expressions can be found in the [`actions.yml`](https://github.com/joblo2213/AoC-badges/blob/master/action.yml)
 if you need to tweak them.
