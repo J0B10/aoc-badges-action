@@ -17,7 +17,7 @@ days_completed_regex = os.getenv('INPUT_DAYSCOMPLETEDREGEX')
 if year is None or not year :
   year = date.today().year
 if leaderboard is None or not leaderboard :
-  leaderboard = 'https://adventofcode.com/%s/leaderboard/private/view/%s.json' % (year, id)
+  leaderboard = f'https://adventofcode.com/{year}/leaderboard/private/view/{id}.json'
 
 # fetch stars
 cookie = { 'session' : session }
@@ -46,9 +46,9 @@ elif today > date(year, 12, 31):
 else:
   day = today.day
 
-print('Day: ' + str(day))
-print('Stars: ' + str(stars))
-print('Days completed: ' + str(days_completed))
+print(f'Day: {day}')
+print(f'Stars: {stars}')
+print(f'Days completed: {days_completed}')
 
 # read file
 f = io.open(readme, mode='r', encoding='utf-8')
