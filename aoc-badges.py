@@ -6,6 +6,7 @@ import io
 from datetime import date, timedelta
 
 # environment variables
+year = os.getenv('INPUT_YEAR')
 leaderboard = os.getenv('INPUT_LEADERBOARD')
 session = os.getenv('INPUT_SESSION')
 readme = os.getenv('INPUT_FILE')
@@ -13,8 +14,10 @@ id = os.getenv('INPUT_USERID')
 day_regex = os.getenv('INPUT_DAYREGEX')
 stars_regex = os.getenv('INPUT_STARSREGEX')
 days_completed_regex = os.getenv('INPUT_DAYSCOMPLETEDREGEX')
+if year is None or not leaderboard :
+  year = date.today().year
 if leaderboard is None or not leaderboard :
-  leaderboard = 'https://adventofcode.com/2020/leaderboard/private/view/' + id + ".json"
+  leaderboard = 'https://adventofcode.com/%s/leaderboard/private/view/%s.json' % (year, id)
 
 # fetch stars
 cookie = { 'session' : session }

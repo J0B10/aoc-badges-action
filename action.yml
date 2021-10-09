@@ -13,6 +13,11 @@ inputs:
     description: >
       Your unique userid on adventofcode.com, obtain it from **YOUR** private leaderboard url (its the number at the end of the url).
     required: true
+  year:
+    description: >
+      The year for which the stats should be retrived. 
+      If not speified, the current year (from system time) is used.
+    required: false
   leaderboard:
     description: >
       The url of your leaderboard json file. 
