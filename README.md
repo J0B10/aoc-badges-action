@@ -47,7 +47,7 @@ The day badge probably doesn't makes sense for multiple years as it only depends
 name: Update AoC Badges
 on:
   schedule:                                      # run workflow based on schedule
-    - cron: '0 6 1-25 12 *'                      # from the 1. December till 25. December every day at 6am
+    - cron: '6 5 1-25 12 *'                      # from the 1. December till 25. December every day at 5:06am (avoid load at full hours)
     
   workflow_dispatch:                             # allow to manually start the workflow 
   
