@@ -23,8 +23,12 @@ if leaderboard is None or not leaderboard :
 cookie = { 'session' : session }
 print('Fetching leaderboard data from : ' + leaderboard)
 r = requests.get(leaderboard, cookies = cookie)
-print(r.text)
-data = json.loads(r.text)
+try:
+  data = json.loads(r.text)
+except json.JSONDecodeError as err:
+  print('Could not parse leaderboard json. Is the leaderboard url correct & your session code valid?')
+  print(err)
+  exit(1)
 stars = data['members'][id]['stars']
 
 # completed days
