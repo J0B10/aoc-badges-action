@@ -21,6 +21,7 @@ else:
     year = int(year)
   except ValueError:
     print('year input is not an integer')
+    exit(1)
 if leaderboard is None or not leaderboard :
   leaderboard = f'https://adventofcode.com/{year}/leaderboard/private/view/{id}.json'
 
