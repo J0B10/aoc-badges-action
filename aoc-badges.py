@@ -14,7 +14,7 @@ id = os.getenv('INPUT_USERID')
 day_regex = os.getenv('INPUT_DAYREGEX')
 stars_regex = os.getenv('INPUT_STARSREGEX')
 days_completed_regex = os.getenv('INPUT_DAYSCOMPLETEDREGEX')
-if year is None or not leaderboard :
+if year is None or not year :
   year = date.today().year
 if leaderboard is None or not leaderboard :
   leaderboard = 'https://adventofcode.com/%s/leaderboard/private/view/%s.json' % (year, id)
