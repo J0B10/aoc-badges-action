@@ -31,14 +31,15 @@ Then heave a look at the url, the numbers in the end are your user id:
 https://adventofcode.com/2020/leaderboard/private/view/<youruserId>
 ```
 
-To get your session secret press F12 while you are logged in on [adventofcode.com](https://adventofcode.com/) to open the developer tools of your browser. 
-The open the `Application` Tab on Chromium Browsers or `Storage` on firefox. There you can have a look at your cookies and copy the session id.
+To get your session secret press F12 while you are logged in on [adventofcode.com](https://adventofcode.com/) to open the developer tools of your browser.  
+Then open the `Application` Tab on Chromium Browsers or `Storage` on firefox. There you can have a look at your cookies and copy the session id.
+You need to add this session id as [encrypted secret](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) to your repository.
 
-At last make sure you have a [ssh deploy key](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys#deploy-keys) 
-with which you can push to your repo.  
-Add the deploy keys private key and your aoc session code as [encrypted secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) to your repository.  
+Now you can set up the workflow. The sample workflow beyond will help you.  
 
-Now you can set up the workflow. Look at this sample:
+If you want to set up badges for multiple years in one repository just add this action multiple times (once for each year using the `year` input).  
+Have slightly different badges for each year with a custom regex using the regex inputs.  
+The day badge probably doesn't makes sense for multiple years as it only depends on the current date (and therefore only works in December).
 
 ## Sample Workflow
 
@@ -52,23 +53,22 @@ on:
   
 # push:                                          # (disabled) run on push, be carefull with this setting 
                                                  # as the workflow should only be triggered at a rate lower than
-                                                 # 4 times a houre to keep traffic on aoc site low 
+                                                 # 4 times a hour to keep traffic on aoc site low 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
     
       - uses: actions/checkout@v2                # clones your repo, make sure the ssh secret is set!
-        with:
-          ssh-key: ${{ secrets.SSH_KEY }}
           
-      - uses: joblo2213/aoc-badges-action@v2.1
+      - uses: joblo2213/aoc-badges-action@v3
         with:
           userid: 00000                          # your user id, see setup on how to obtain
           session: ${{ secrets.AOC_SESSION }}    # secret containing session code, see setup on how to obtain
           
 #         Optional inputs:
 #         
+#         year: 2021                                                                                     # The year for which stats should be retrieved
 #         leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
 #         file: 'README.md'                                                                              # The file that contains the badges
 #         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge iun your file.
