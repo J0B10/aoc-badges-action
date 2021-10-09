@@ -16,6 +16,11 @@ stars_regex = os.getenv('INPUT_STARSREGEX')
 days_completed_regex = os.getenv('INPUT_DAYSCOMPLETEDREGEX')
 if year is None or not year :
   year = date.today().year
+else:
+  try:
+    year = int(year)
+  except ValueError:
+    print('year input is not an integer')
 if leaderboard is None or not leaderboard :
   leaderboard = f'https://adventofcode.com/{year}/leaderboard/private/view/{id}.json'
 
