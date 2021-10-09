@@ -75,11 +75,8 @@ jobs:
 #         starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge iun your file.
 #         daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
 
-      - name: Push changes                        # Step that pushes these local changes back to your github repo
-        run: |
-          git config --global user.email "<>"
-          git config --global user.name "aoc-badges-action"
-          git add .
-          git diff-index --quiet HEAD || git commit --message "Update badges"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4     # Step that pushes these local changes back to your github repo
+        with:
+          commit_message: Update badges
+          file_pattern: README.md
 ```

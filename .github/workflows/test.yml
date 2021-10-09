@@ -15,10 +15,7 @@ jobs:
         with:
           userid: 658601
           session: ${{ secrets.AOC_SESSION }}
-      - name: Push changes
-        run: |
-          git config --global user.email "<>"
-          git config --global user.name "aoc-badges-action"
-          git add .
-          git diff-index --quiet HEAD || git commit --message "Update badges"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update badges
+          file_pattern: README.md
