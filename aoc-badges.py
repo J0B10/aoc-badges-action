@@ -39,7 +39,12 @@ for day in data['members'][id]['completion_day_level']:
 
 # current day
 today = date.today() - timedelta(hours=5)
-day = today.day if today.month == 12 else 24
+if today < date(year, 12, 0):
+  day = 0
+elif today > date(year, 12, 31):
+  day = 24
+else:
+  day = today.day
 
 print('Day: ' + str(day))
 print('Stars: ' + str(stars))
