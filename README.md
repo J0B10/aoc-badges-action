@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-      - uses: actions/checkout@v3                # clones your repo, make sure the ssh secret is set!
+      - uses: actions/checkout@v2                # clones your repo, make sure the ssh secret is set!
           
       - uses: joblo2213/aoc-badges-action@v3
         with:
