@@ -9,7 +9,7 @@ Have a look at these examples:
 ## Setup
 First of all you have to add the badges to your README.
 You can use only some of them or even customize them to fit your needs.  
-Note that if you want to customize the badges you might have to tweak the regeular expressions used to match your badges.
+Note that if you want to customize the badges you might have to tweak the regular expressions used to match your badges.
 Here are the default ones:
 
 | Badge                                                    | Raw Badge                                                 | Description                                            |
