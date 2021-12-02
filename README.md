@@ -24,8 +24,8 @@ if you need to tweak them.
 The action will search through your readme and updates all badges it finds using the provided (or default) regular expressions.
 
 Next you have to obtain your session and your user id.  
-Go to [Advent of Code leaderboards](https://adventofcode.com/2020/leaderboard/private) and click on `[View]` to visit your private leaderboard.
-Then heave a look at the url, the numbers in the end are your user id:
+Go to [Advent of Code leaderboards](https://adventofcode.com/2020/leaderboard/private) and click on `[Create]` and then on `[View]` to visit your private leaderboard.
+Then have a look at the url, the numbers at the end are your user id:
 
 ```
 https://adventofcode.com/2020/leaderboard/private/view/<youruserId>
@@ -70,8 +70,8 @@ jobs:
 #         year: 2021                                                                                     # The year for which stats should be retrieved
 #         leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
 #         file: 'README.md'                                                                              # The file that contains the badges
-#         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge iun your file.
-#         starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge iun your file.
+#         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge in your file.
+#         starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge in your file.
 #         daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
 
       - uses: stefanzweifel/git-auto-commit-action@v4     # Step that pushes these local changes back to your github repo
