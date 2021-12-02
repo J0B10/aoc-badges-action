@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ssh-key: ${{ secrets.SSH_KEY }}
       - uses: joblo2213/aoc-badges-action@master
         with:
           userid: 658601
