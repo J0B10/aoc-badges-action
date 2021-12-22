@@ -3,8 +3,8 @@ Github Action to update the [badges](https://github.com/badges/shields) of your 
 
 Have a look at these examples:
 
-![](https://img.shields.io/badge/day%20📅-2-blue)
-![](https://img.shields.io/badge/stars%20⭐-4-yellow)
+![](https://img.shields.io/badge/day%20📅-22-blue)
+![](https://img.shields.io/badge/stars%20⭐-34-yellow)
 
 ## Setup
 First of all you have to add the badges to your README.
@@ -14,9 +14,9 @@ Here are the default ones:
 
 | Badge                                                    | Raw Badge                                                 | Description                                            |
 |----------------------------------------------------------|-----------------------------------------------------------|--------------------------------------------------------|
-| ![](https://img.shields.io/badge/day%20📅-2-blue)        | `![](https://img.shields.io/badge/day%20📅-2-blue)`       | Displays the current calendar day                      |
-| ![](https://img.shields.io/badge/stars%20⭐-4-yellow)   | `![](https://img.shields.io/badge/stars%20⭐-4-yellow)`  | Displays the total amount of collected stars           |
-| ![](https://img.shields.io/badge/days%20completed-2-red) | `![](https://img.shields.io/badge/days%20completed-2-red)` | Displyas on how many days you completed all tasks      |
+| ![](https://img.shields.io/badge/day%20📅-22-blue)        | `![](https://img.shields.io/badge/day%20📅-22-blue)`       | Displays the current calendar day                      |
+| ![](https://img.shields.io/badge/stars%20⭐-34-yellow)   | `![](https://img.shields.io/badge/stars%20⭐-34-yellow)`  | Displays the total amount of collected stars           |
+| ![](https://img.shields.io/badge/days%20completed-17-red) | `![](https://img.shields.io/badge/days%20completed-17-red)` | Displyas on how many days you completed all tasks      |
 
 The default values for the regular expressions can be found in the [`actions.yml`](https://github.com/joblo2213/AoC-badges/blob/master/action.yml)
 if you need to tweak them.
