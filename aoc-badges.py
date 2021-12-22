@@ -38,6 +38,7 @@ except json.JSONDecodeError as err:
     print('Could not parse leaderboard json. Is the leaderboard url correct & your session code valid?')
     print(err)
     exit(1)
+# noinspection PyUnboundLocalVariable
 stars = data['members'][userid]['stars']
 
 # completed days
