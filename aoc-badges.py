@@ -29,6 +29,9 @@ if leaderboard is None or not leaderboard :
 cookie = { 'session' : session }
 print('Fetching leaderboard data from : ' + leaderboard)
 r = requests.get(leaderboard, cookies = cookie)
+if r.status_code != 200:
+  print(f'Leaderboard API returned status code {r.status_code}: {r.text}')
+  exit(1)
 try:
   data = json.loads(r.text)
 except json.JSONDecodeError as err:
