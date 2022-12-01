@@ -58,7 +58,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2                # clones your repo
+      - uses: actions/checkout@v3                # clones your repo
           
       - uses: joblo2213/aoc-badges-action@v3
         with:
@@ -67,7 +67,7 @@ jobs:
           
 #         Optional inputs:
 #         
-#         year: 2021                                                                                     # The year for which stats should be retrieved
+#         year: 2022                                                                                     # The year for which stats should be retrieved
 #         leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
 #         file: 'README.md'                                                                              # The file that contains the badges
 #         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge in your file.
