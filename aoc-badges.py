@@ -3,7 +3,8 @@ import json
 import os
 import re
 import io
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
+import pytz
 
 # environment variables
 year = os.getenv('INPUT_YEAR')
@@ -47,11 +48,16 @@ for day in data['members'][userid]['completion_day_level']:
     if '2' in data['members'][userid]['completion_day_level'][day]:
         days_completed += 1
 
-# current day
-today = date.today() - timedelta(hours=5)
-if today < date(year, 12, 1):
+# Set the timezone to New York
+new_york_tz = pytz.timezone('America/New_York')
+
+# Get the current time in New York
+today = datetime.now(new_york_tz).date()
+
+# Your existing logic to determine the day
+if today < datetime(year, 12, 1, tzinfo=new_york_tz).date():
     day = 0
-elif today > date(year, 12, 31):
+elif today > datetime(year, 12, 31, tzinfo=new_york_tz).date():
     day = 24
 else:
     day = today.day
