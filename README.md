@@ -37,9 +37,14 @@ You need to add this session id as [encrypted secret](https://docs.github.com/en
 
 Now you can set up the workflow. The sample workflow beyond will help you.  
 
+## Handle multiple years
+### Multiple badges
 If you want to set up badges for multiple years in one repository just add this action multiple times (once for each year using the `year` input).  
 Have slightly different badges for each year with a custom regex using the regex inputs.  
 The day badge probably doesn't makes sense for multiple years as it only depends on the current date (and therefore only works in December).
+
+### One badge
+If you want to have a custom badge to group multiple years in one repository just add all the years, separated by a comma, inside the `year:` optional input.
 
 ## Sample Workflow
 
@@ -67,7 +72,7 @@ jobs:
           
 #         Optional inputs:
 #         
-#         year: 2021                                                                                     # The year for which stats should be retrieved
+#         year: 2021                                                                                     # The year for which stats should be retrieved. Write 20XX,20XX to combine multiple years.
 #         leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
 #         file: 'README.md'                                                                              # The file that contains the badges
 #         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge in your file.
