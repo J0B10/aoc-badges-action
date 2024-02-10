@@ -47,7 +47,6 @@ for year in years:
     stars += data['members'][userid]['stars']
 
     # completed days
-    days_completed = 0
     for day in data['members'][userid]['completion_day_level']:
         if '2' in data['members'][userid]['completion_day_level'][day]:
             days_completed += 1
